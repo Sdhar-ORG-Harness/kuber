@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: component
+orgIdentifier: default
+projectIdentifier: sd2
+type: Service
+identifier: argocd_deployment_argocd_dex_server
+name: "argocd-dex-server"
+owner: group:account/IDP_Test
+spec:
+  lifecycle: production
+  type: kubernetes
+  subtype: Deployment
+metadata:
+  description: "Kubernetes Deployment in namespace argocd"
+  annotations:
+    kubernetes.io/namespace: argocd
+    kubernetes.io/kind: Deployment
+  tags:
+    - kubernetes
+    - auto-onboarded
+    - argocd
+    - deployment
