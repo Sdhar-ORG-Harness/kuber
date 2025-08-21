@@ -1,0 +1,23 @@
+apiVersion: harness.io/v1
+kind: component
+orgIdentifier: default
+projectIdentifier: sd2
+type: Service
+identifier: default_backend_d7edbd06
+name: "default-backend"
+owner: group:account/IDP_Test
+spec:
+  lifecycle: production
+  type: kubernetes
+  subtype: Deployment
+metadata:
+  description: "Kubernetes Deployment default-backend in namespace deveshharness"
+  annotations:
+    backstage.io/kubernetes-id: default-backend
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/managed-by=Helm,created_by=terraform'
+  tags:
+    - kubernetes
+    - auto-onboarded
+    - deveshharness
+    - deployment
