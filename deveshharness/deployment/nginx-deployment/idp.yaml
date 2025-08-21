@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_nginx_deployment_60549a
+name: nginx-deployment
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment nginx-deployment in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: nginx-deployment
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app=nginx,tier=frontend
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
