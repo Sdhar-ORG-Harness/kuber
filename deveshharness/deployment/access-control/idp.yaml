@@ -1,19 +1,23 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: harness.io/v1
+kind: component
+orgIdentifier: default
+projectIdentifier: sd2
+type: Service
+identifier: access_control_23e5d22a
+name: "access-control"
+owner: group:account/IDP_Test
+spec:
+  lifecycle: production
+  type: kubernetes
+  subtype: Deployment
 metadata:
-  name: access_control_dfb1b166
-  title: access-control
-  description: Kubernetes Deployment access-control in namespace deveshharness
+  description: "Kubernetes Deployment access-control in namespace deveshharness"
   annotations:
     backstage.io/kubernetes-id: access-control
     backstage.io/kubernetes-namespace: deveshharness
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=access-control,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=access-control,app.kubernetes.io/version=1.0.79802,created_by=terraform,helm.sh/chart=access-control-1.92.1-idp-5542-1d31a0'
   tags:
     - kubernetes
-    - deployment
+    - auto-onboarded
     - deveshharness
-spec:
-  type: service
-  lifecycle: production
-  owner: user:guest
-  system: kubernetes
+    - deployment
