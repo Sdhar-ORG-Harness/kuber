@@ -1,23 +1,19 @@
-apiVersion: harness.io/v1
-kind: component
-orgIdentifier: default
-projectIdentifier: sd2
-type: Service
-identifier: deveshharness_deployment_ci_manager
-name: "ci-manager"
-owner: group:account/IDP_Test
-spec:
-  lifecycle: production
-  type: kubernetes
-  subtype: Deployment
+apiVersion: backstage.io/v1alpha1
+kind: Component
 metadata:
-  description: "Kubernetes Deployment in namespace deveshharness"
+  name: ci_manager_9d0b8774
+  title: ci-manager
+  description: Kubernetes Deployment ci-manager in namespace deveshharness
   annotations:
     backstage.io/kubernetes-id: ci-manager
     backstage.io/kubernetes-namespace: deveshharness
-    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=ci-manager,app.kubernetes.io/name=ci-manager'
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=ci-manager,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=ci-manager,app.kubernetes.io/version=0.0.5309,created_by=terraform,helm.sh/chart=ci-manager-1.92.3'
   tags:
     - kubernetes
-    - auto-onboarded
-    - deveshharness
     - deployment
+    - deveshharness
+spec:
+  type: service
+  lifecycle: production
+  owner: user:guest
+  system: kubernetes
