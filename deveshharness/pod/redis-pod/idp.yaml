@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_pod_redis_pod_b5bd57
+name: redis-pod
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Pod
+metadata:
+  description: Kubernetes Pod redis-pod in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: redis-pod
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app=redis
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - pod
