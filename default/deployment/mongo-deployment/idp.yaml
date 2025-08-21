@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: default_deployment_mongo_deployment_584e0c
+name: mongo-deployment
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment mongo-deployment in namespace default
+  annotations:
+    backstage.io/kubernetes-id: mongo-deployment
+    backstage.io/kubernetes-namespace: default
+    backstage.io/kubernetes-label-selector: app=mongo,tier=database
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - default
+  - deployment
