@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: code_api_8af4ac23
+  title: code-api
+  description: Kubernetes Deployment code-api in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: code-api
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=code-api,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=code-api,app.kubernetes.io/version=1.773.0,created_by=terraform,helm.sh/chart=code-api-1.54.1'
+  tags:
+    - kubernetes
+    - deployment
+    - deveshharness
+spec:
+  type: service
+  lifecycle: production
+  owner: user:guest
+  system: kubernetes
