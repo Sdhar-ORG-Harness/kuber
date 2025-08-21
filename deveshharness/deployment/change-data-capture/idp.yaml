@@ -1,19 +1,23 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: harness.io/v1
+kind: component
+orgIdentifier: default
+projectIdentifier: sd2
+type: Service
+identifier: change_data_capture_7fe3383b
+name: "change-data-capture"
+owner: group:account/IDP_Test
+spec:
+  lifecycle: production
+  type: kubernetes
+  subtype: Deployment
 metadata:
-  name: change_data_capture_6c32140b
-  title: change-data-capture
-  description: Kubernetes Deployment change-data-capture in namespace deveshharness
+  description: "Kubernetes Deployment change-data-capture in namespace deveshharness"
   annotations:
     backstage.io/kubernetes-id: change-data-capture
     backstage.io/kubernetes-namespace: deveshharness
     backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=change-data-capture,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=change-data-capture,app.kubernetes.io/version=0.0.81510,created_by=terraform,helm.sh/chart=change-data-capture-1.47.0'
   tags:
     - kubernetes
-    - deployment
+    - auto-onboarded
     - deveshharness
-spec:
-  type: service
-  lifecycle: production
-  owner: user:guest
-  system: kubernetes
+    - deployment
