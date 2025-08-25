@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: argocd_deployment_argocd_dex_server
+name: argocd-dex-server
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment argocd-dex-server in namespace argocd
+  annotations:
+    backstage.io/kubernetes-id: argocd-dex-server
+    backstage.io/kubernetes-namespace: argocd
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/component=dex-server,app.kubernetes.io/name=argocd-dex-server,app.kubernetes.io/part-of=argocd
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - argocd
+  - deployment
