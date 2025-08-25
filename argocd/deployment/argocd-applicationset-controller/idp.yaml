@@ -1,0 +1,23 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: argocd_deployment_argocd_applicationset_controller
+name: argocd-applicationset-controller
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment argocd-applicationset-controller in namespace
+    argocd
+  annotations:
+    backstage.io/kubernetes-id: argocd-applicationset-controller
+    backstage.io/kubernetes-namespace: argocd
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/component=applicationset-controller,app.kubernetes.io/name=argocd-applicationset-controller,app.kubernetes.io/part-of=argocd
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - argocd
+  - deployment
