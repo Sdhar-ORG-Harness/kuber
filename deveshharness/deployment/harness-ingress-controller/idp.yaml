@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_harness_ingress_controller
+name: harness-ingress-controller
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment harness-ingress-controller in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: harness-ingress-controller
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/managed-by=Helm,created_by=terraform
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
