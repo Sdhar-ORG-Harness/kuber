@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_service_code_api
+name: code-api
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Service
+metadata:
+  description: Kubernetes Service code-api in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: code-api
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=code-api,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=code-api,app.kubernetes.io/version=1.773.0,helm.sh/chart=code-api-1.55.1
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - service
