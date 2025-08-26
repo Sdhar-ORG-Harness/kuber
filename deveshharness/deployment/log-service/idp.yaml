@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_log_service
+name: log-service
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment log-service in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: log-service
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app=log-service,app.kubernetes.io/instance=log-service,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=log-service,app.kubernetes.io/version=0.0.release-128-ubi,created_by=terraform,helm.sh/chart=log-service-1.18.0
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
