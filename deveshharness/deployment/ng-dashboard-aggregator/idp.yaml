@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_ng_dashboard_aggregator
+name: ng-dashboard-aggregator
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment ng-dashboard-aggregator in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: ng-dashboard-aggregator
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=ng-dashboard-aggregator,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=ng-dashboard-aggregator,app.kubernetes.io/version=0.0.80909,created_by=terraform,helm.sh/chart=ng-dashboard-aggregator-1.66.0
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
