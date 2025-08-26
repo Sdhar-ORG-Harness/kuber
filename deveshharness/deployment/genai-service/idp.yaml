@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_genai_service
+name: genai-service
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment genai-service in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: genai-service
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=genai-service,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=genai-service,app.kubernetes.io/version=1.1.0,created_by=terraform,helm.sh/chart=genai-service-1.23.7
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
