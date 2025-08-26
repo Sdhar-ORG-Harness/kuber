@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_next_gen_ui
+name: next-gen-ui
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment next-gen-ui in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: next-gen-ui
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=next-gen-ui,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=next-gen-ui,app.kubernetes.io/version=0.353.10,created_by=terraform,helm.sh/chart=next-gen-ui-1.86.1
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
