@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_service_ci_manager_headless
+name: ci-manager-headless
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Service
+metadata:
+  description: Kubernetes Service ci-manager-headless in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: ci-manager-headless
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=ci-manager,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=ci-manager,app.kubernetes.io/version=0.0.5309,created_by=terraform,helm.sh/chart=ci-manager-1.93.0
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - service
