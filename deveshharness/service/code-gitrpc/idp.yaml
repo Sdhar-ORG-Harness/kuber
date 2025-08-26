@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_service_code_gitrpc
+name: code-gitrpc
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Service
+metadata:
+  description: Kubernetes Service code-gitrpc in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: code-gitrpc
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=code-gitrpc,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=code-gitrpc,app.kubernetes.io/version=1.773.0,helm.sh/chart=code-gitrpc-1.55.1
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - service
