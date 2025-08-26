@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_ng_auth_ui
+name: ng-auth-ui
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment ng-auth-ui in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: ng-auth-ui
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=ng-auth-ui,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=ng-auth-ui,app.kubernetes.io/version=0.0.1,created_by=terraform,helm.sh/chart=ng-auth-ui-1.36.0
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
