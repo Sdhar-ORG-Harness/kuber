@@ -1,0 +1,22 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_scm
+name: scm
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment scm in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: scm
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=scm-service,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=scm-service,app.kubernetes.io/version=0.0.release-181-ubi,created_by=terraform,helm.sh/chart=scm-service-1.40.0
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
