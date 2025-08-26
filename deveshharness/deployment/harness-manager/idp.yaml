@@ -1,0 +1,30 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: deveshharness_deployment_harness_manager
+name: harness-manager
+owner: group:account/IDP_Test
+orgIdentifier: default
+projectIdentifier: sd2
+spec:
+  lifecycle: production
+  dependsOn:
+  - Component:postgres
+  - Component:harness-ingress-controller
+  - Component:ssca-manager
+  - Component:timescaledb-single-chart
+  - Component:default-backend
+  - Component:component-service
+  - Component:mongodb-replicaset-chart
+  subtype: Deployment
+metadata:
+  description: Kubernetes Deployment harness-manager in namespace deveshharness
+  annotations:
+    backstage.io/kubernetes-id: harness-manager
+    backstage.io/kubernetes-namespace: deveshharness
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=harness-manager,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=harness-manager,app.kubernetes.io/version=0.0.81725,created_by=terraform,helm.sh/chart=harness-manager-1.95.0-idp-5441-467bd3
+  tags:
+  - kubernetes
+  - auto-onboarded
+  - deveshharness
+  - deployment
