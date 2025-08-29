@@ -22,8 +22,8 @@ metadata:
     backstage.io/kubernetes-namespace: deveshharness
     backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=access-control,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=access-control,app.kubernetes.io/version=1.0.79802,created_by=terraform,helm.sh/chart=access-control-1.92.1-idp-5542-1d31a0
     jfrog.com/artifactory-artifact: test-chart-1.1.1.tgz
-    jfrog.com/artifactory-group: manifest-trigger
-    jfrog.com/artifactory-repo: Venkat-Test-BT-274
+    jfrog.com/artifactory-group: test200mb_3.zip
+    jfrog.com/artifactory-repo: KenTest/test200mb_3.zip
   tags:
   - kubernetes
   - auto-onboarded
