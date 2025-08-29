@@ -21,9 +21,10 @@ metadata:
     backstage.io/kubernetes-id: access-control
     backstage.io/kubernetes-namespace: deveshharness
     backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=access-control,app.kubernetes.io/managed-by=Helm,app.kubernetes.io/name=access-control,app.kubernetes.io/version=1.0.79802,created_by=terraform,helm.sh/chart=access-control-1.92.1-idp-5542-1d31a0
-    jfrog.com/artifactory-group: DEP
-    jfrog.com/artifactory-artifact: dotnetlambdatest03-1.0.0.zip
-    jfrog.com/artifactory-repo: ESA
+    jfrog.com/artifactory-repo: ci-internal
+    jfrog.com/artifactory-group: org/apache/commons
+    jfrog.com/artifactory-artifact: commons-lang3-3.5.jar
+    jfrog.com/artifactory-version: '3.5'
   tags:
   - kubernetes
   - auto-onboarded
