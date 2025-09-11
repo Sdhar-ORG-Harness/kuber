@@ -3,7 +3,7 @@ kind: Component
 type: service
 identifier: deveshharness_deployment_access_control
 name: access-control
-owner: group:account/IDP_Test
+owner: group:account/AAAFF
 orgIdentifier: default
 projectIdentifier: sd2
 spec:
